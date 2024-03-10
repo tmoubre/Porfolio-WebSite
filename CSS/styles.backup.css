@@ -1,0 +1,308 @@
+/*
+Colors used
+Background Color (Light Grey): #D3D3D3
+Text Color (Dark Gray): #2b2b2b;
+Primary Color (Purple): #357b70;
+Secondary Color (Orange): #e0b354;
+ */
+:root {
+  --primary-color: #357b70;
+  --secondary-color: #e0b354;
+  --dark-grey: #2b2b2b;
+}
+
+a {
+  color: var(--primary-color);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  list-style-position: inside;
+}
+
+.ul2 {
+  list-style: none;
+  list-style-position: inside;
+  text-align: center;
+}
+
+.navigation-list {
+  list-style-type: none;
+}
+
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.page-header {
+  /* flex would not work here. It made the test go stacked next to my logo */
+  display: inline-block;
+  width: 100%;
+  padding: 20px;
+}
+
+.page-header__item:last-child {
+  flex: 0 1 200px;
+  text-align: right;
+}
+
+/* start fall back */
+.grid__item {
+  display: inline-block;
+  width: 33%;
+
+  /* end grid fall back */
+}
+
+@supports (display: grid) {
+  .grid {
+    display: grid;
+
+    /* grid-template columns: 300px 300px 300px; fractions are better than pixals-they are responsive */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin: 0;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin-left: 50px;
+  margin-right: 50px;
+  grid-gap: 20px;
+  text-align: center;
+}
+
+.grid__item {
+  background-color: white;
+  width: auto;
+  min-width: auto;
+  margin: 0;
+  transition: transform 0.3s ease;
+}
+
+.grid__item:last-child {
+  grid-column: 3/3;
+  grid-row: 1/3;
+}
+
+.grid__item:hover {
+  transform: scale(1.1);
+}
+
+a {
+  color: #000;
+}
+
+a:visited {
+  /* visited Link */
+  color: #05676e;
+}
+
+a:hover,
+a:focus {
+  /* No underling when hovering over a link as well as putting a focus box around the link when in focus */
+  text-decoration: none;
+  color: #00ff62;
+  opacity: 0.8;
+}
+
+a:active {
+  /* selected Link */
+  color: #489c79;
+}
+
+.button1 {
+  /* Button Properties */
+  display: inline-block;
+  font-family: inherit;
+  border: none;
+  background-color: #357b70;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid rgba(red, green, blue, alpha);
+  transition: 0.2s;
+  transition-property: opacity;
+}
+
+.button2,
+.button-container {
+  /* Button Properties */
+  display: block;
+  height: 40px;
+  width: 165px;
+  text-align: center;
+  border: none;
+  margin: auto;
+  font-family: inherit;
+  background-color: #357b70;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid rgba(red, green, blue, alpha);
+  transition: 0.2s;
+  transition-property: opacity;
+}
+
+button:hover,
+button:focus,
+.button__primary:hover,
+.button__primary:focus {
+  /* lets move the mouse apper as hand when hovering */
+  cursor: pointer;
+
+  /* reduces the opacity of the button */
+  opacity: 0.8;
+}
+
+.navigation-list__item--active {
+  /* Removes underline from focused page */
+  text-decoration: none;
+  font-family: "Asul", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  /* background Colr */
+  background-color: #d3d3d3;
+}
+
+body {
+  font-family: "Asul", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.asul-bold {
+  font-family: "Asul", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.profile {
+  max-width: 700px;
+  margin: auto;
+}
+
+.profile__portrait {
+  float: left;
+  width: 450px;
+  height: 450;
+  margin-right: 40px;
+  margin-left: 40px;
+  border-radius: 50%;
+}
+
+.page-footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #000dff;
+}
+
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+
+  .grid__item:last-child {
+    grid-column: auto/auto;
+    grid-row: auto/auto;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}
+
+@keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+
+  50% {
+    fill: #fcffad;
+  }
+
+  100% {
+    fill: #f76414;
+  }
+}
+
+.sun {
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+
+.cloud-front {
+  animation-duration: 30s;
+  animation-name: cloud-move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
