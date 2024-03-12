@@ -32,6 +32,7 @@ ul {
   list-style: none;
   list-style-position: inside;
   text-align: center;
+  padding: 0;
 }
 
 .navigation-list {
@@ -218,8 +219,8 @@ a {
   transition-property: opacity;
 }
 
-.button-container {
-  /* Button Properties */
+/*.button-container {
+  /* Button Properties
   display: block;
   height: 40px;
   width: 165px;
@@ -239,7 +240,7 @@ a {
   -webkit-transition-property: opacity;
   -o-transition-property: opacity;
   transition-property: opacity;
-}
+}*/
 
 button {
   &:hover, &:focus {
@@ -304,8 +305,8 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   text-align: center;
 }
 
