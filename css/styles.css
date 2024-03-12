@@ -36,6 +36,7 @@ ul {
   list-style-position: inside;
   text-align: center;
   padding: 0;
+
 }
 
 .navigation-list {
@@ -141,6 +142,7 @@ a {
   transition: 0.2s;
   transition-property: opacity;
 }
+
 
 .button2 {
   /* Button Properties */
