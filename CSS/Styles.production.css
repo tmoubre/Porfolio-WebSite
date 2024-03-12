@@ -32,6 +32,7 @@ ul {
   list-style: none;
   list-style-position: inside;
   text-align: center;
+  padding: 0;
 }
 
 .navigation-list {
