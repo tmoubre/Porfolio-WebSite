@@ -1,0 +1,87 @@
+I want to say that i was not able to use the link provided to do the browser compatability testing. I did use one that was free for 3 tests but there were not any report about the outcome. I will be happy to try this step again if there is another site. 
+
+
+
+
+StyleLint
+HTMLHINT
+
+
+In my HTNL i have some duplicate attribute name that are part of the SVG image for the following: 
+
+width=""
+
+Twiter
+githu
+linkedin
+
+
+Vendor property not set in StyleLint for the  -ms-grid-row: and -ms-grid-column:, I am not familiar enough whith setting the property to know how to fix this. 
+
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 20px 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin-left: 50px;
+  margin-right: 50px;
+  grid-gap: 20px;
+  text-align: center;
+
+
+}
+
+.grid > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.grid > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+
+.grid > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+}
+
+.grid > *:nth-child(4) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+
+.grid > *:nth-child(5) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+}
+
+.grid > *:nth-child(6) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
+}
+
+the button class and psuedo class do not like that the property is all on one line. STYLINT is set to force a new line. 
+
+button {
+  &:hover, &:focus {
+    /* lets move the mouse apper as hand when hovering */
+    cursor: pointer;
+
+    /* reduces the opacity of the button */
+    opacity: 0.8;
+  }
+}
+
+.button__primary {
+  &:hover, &:focus {
+    /* lets move the mouse apper as hand when hovering */
+    cursor: pointer;
+
+    /* reduces the opacity of the button */
+    opacity: 0.8;
+  }
+}

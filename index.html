@@ -4,28 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact For Troy Oubre</title>
+    <title>Troy's Portfolio - Portfolio</title>
+    <link rel="shortcut icon" href="favicn.ico">
+    <link rel="shortcut icon" href="./img/favicon.ico">
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.production.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Asul:wght@400;700&family=Ruda:wght@400..900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Asul:wght@400;700&family=Euphoria+Script&family=Ruda:wght@400..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/styles.production.css">
+
+
 </head>
 
 <body>
+
     <header class="page-header">
         <!--Add your logo Here-->
         <a href="./index.html">
             <img src="./img/troy-oubre.png" alt="Logo" height="125" width="125">
         </a>
 
-
         <nav class="main-navigation page-header__item">
             <ul role="menubar" class="navigation-list">
                 <li role="presentation">
-                    <a href="./index.html" role="menuitem" class="navigation-list__item navigation-list__item">Home</a>
+                    <a href="./index.html" role="menuitem"
+                        class="navigation-list__item navigation-list__item--active">Home</a>
                 </li>
                 <li role="presentation">
                     <a href="./about.html" role="menuitem" class="navigation-list__item">About</a>
@@ -34,34 +40,34 @@
                     <a href="./work.html" role="menuitem" class="navigation-list__item">Work</a>
                 </li>
                 <li role="presentation">
-                    <a href="./contact.html" role="menuitem" class="navigation-list__item--active ">Contact</a>
+                    <a href="./contact.html" role="menuitem" class="navigation-list__item">Contact</a>
                 </li>
             </ul>
         </nav>
     </header>
+
     <main>
-        <form method="post" id="contact-form">
-            <label class="standard-label" for="contact-email">E-mail:</label>
-            <input type="email" id="contact-email" required>
-
-            <label class="standard-label" for="telephone-number">Telephone:</label>
-            <input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="telephone-number" required>
-
-            <label class="standard-label" for="message">Message:</label>
-            <textarea maxlength="240" id="message" required></textarea>
-
-            <input type="submit" value="send messsage">
-        </form>
+        <div class="profile"><!--add your portrati here-->
+            <img src="./img/cover.png" class="profile__portrait" alt="Photograph of me">
+        </div>
+        <div>
+            <h1>Hello World!</h1>
+            <p>
+                My name is Troy Oubre. I am a <span>Web</span> developer from Louisiana.
+            </p>
+            <a href="#">Check out some of my code</a>
+        </div>
         <script src="js/tota11y.min.js"></script>
+        <a href="#">Default Link</a>"
+        <button class="button1">Default Button</button>
 
-
-
-
-
+        <button class="button1">Secondary Button</button>
 
     </main>
+
     <footer class="page-footer">
         <p>Find me on</p>
+
         <div class="social-media">
             <a href="https://github.com/">
                 <svg
@@ -116,19 +122,7 @@
                 </svg>
             </a>
         </div>
-        <div>
-            <h1>Contact:</h1>
-            Troy M Oubre<br>
-            16345 Antietam Ave.<br>
-            Baton Rouge, La. 70817<br>
-            <a href="tel:504-715-0645">504.715.0645</a><br>
-            <a href="mailto:oubre1@att.net">oubre1@att.net</a><br>
-            <a href="mailto:oubre1@att.net">Contact Me</a>
-        </div>
-
     </footer>
-
-
 
 </body>
 
